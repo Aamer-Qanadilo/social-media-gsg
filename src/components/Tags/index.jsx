@@ -17,7 +17,9 @@ const Tags = () => {
   const data = useContext(PostsContext);
   const handelClick = (tag) => {
     const filteredPosts = data.posts.filter((post) => {
-      return post.tags[0] === tag;
+      return (
+        post.tags[0] === tag || post.tags[1] === tag || post.tags[2] === tag
+      );
     });
     data.setPosts(filteredPosts);
   };
