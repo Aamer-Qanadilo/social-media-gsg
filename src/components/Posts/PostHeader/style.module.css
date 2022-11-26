@@ -1,0 +1,28 @@
+.avatar{
+    display: inline-block;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.userName:after{
+content: '6 hours ago';
+display: block;
+color: #ccc;
+font-size: 12px;
+}
+
+.postTitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5rem 0;
+}
+
+@media (max-width:992px){
+    
+.postTitle{
+    font-size: 0.8rem;
+}
+}
+
+.postDescription{
+    font-size: 0.82rem;
+}

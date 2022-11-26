@@ -1,0 +1,16 @@
+.reactionsHolder{
+    margin-top: 1.5rem;
+}
+
+.likesCount{
+    display: inline-block;
+    font-size: 0.88rem;
+    user-select: none;
+    cursor: default;
+}
+
+.reaction{
+    margin: 0 0.8rem;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
