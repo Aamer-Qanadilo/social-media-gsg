@@ -1,0 +1,22 @@
+.NewPostFooter {
+  width: 100%;
+  border-top: 1px solid rgba(23, 22, 22, 0.097);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newPostAdditions {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+
+.NewPostFooter > button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1d8cf9;
+  border: 0;
+  color: white;
+}

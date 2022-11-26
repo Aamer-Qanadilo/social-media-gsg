@@ -1,19 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { Calendar } from "react-calendar";
 import AddPost from "../components/AddPost";
 import Posts from "../components/Posts";
 import { PostsContext } from "../components/PostsContext";
 import Tags from "../components/Tags";
 
+// import styles from "../index.css";
+
 const Home = () => {
-  const { posts } = useContext(PostsContext);
-  console.log(posts);
+  const [value, onChange] = useState(new Date());
 
   return (
-    <React.Fragment>
+    <div className="pageContainer">
       <Tags />
       <AddPost />
+      <Calendar onChange={onChange} value={value} className="pageCalendar" />
       <Posts />
-    </React.Fragment>
+    </div>
   );
 };
 

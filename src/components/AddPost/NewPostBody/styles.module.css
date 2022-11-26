@@ -1,0 +1,24 @@
+.newPostBody {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+
+.newPostBodyImage {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.newPostBodyImage > img {
+  width: 100%;
+}
+
+.newPostBody > input {
+  margin-left: 20px;
+  padding: 10px;
+  border: 0;
+  width: 90%;
+}

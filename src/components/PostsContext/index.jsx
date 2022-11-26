@@ -9,7 +9,11 @@ export const PostsProvider = ({ children }) => {
   const getPosts = async () => {
     const { data } = await axios.get("https://dummyjson.com/posts");
     // console.log(data);
-    setPosts(data.posts);
+    const tempPosts = [];
+    data.posts.map((post) => {
+      tempPosts.push({ ...post, liked: false });
+    });
+    setPosts(tempPosts);
   };
 
   useEffect(() => {

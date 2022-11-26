@@ -1,0 +1,20 @@
+.newPostSelector {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 25px;
+  align-items: center;
+}
+
+.postSelector {
+  color: #202841;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.postSelector.postSelected {
+  background-color: #f0f3f8;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
