@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.tagsContainer {
+  width: 20%;
+  background-color: #fff;
+  box-shadow: 1px 1px 9px #000;
+  border-radius: 3px;
+}
+
+.title {
+  padding: 20px 30px;
+  border-bottom: 1px #b9bfca solid;
+}
+
+.titleText {
+  font-size: 16px;
+  color: #919bab;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tags {
+  margin: auto;
+}
+
+.tagsList {
+  list-style: none;
+  padding: 12px 0px;
+}
+
+.listItem {
+  width: 100%;
+}
+
+.itemBtn {
+  margin: 1px 0px;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  text-align: start;
+  text-transform: capitalize;
+  padding: 12px 30px;
+}
+
+.itemBtn:hover,
+.itemBtn:focus {
+  background-color: #1f8efa;
+  color: white;
+  border-radius: 3px;
+}
