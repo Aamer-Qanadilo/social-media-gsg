@@ -3,7 +3,9 @@ import Style from './style.module.css'
 import { useContext,useState } from 'react';
 import { PostsContext } from '../PostsContext'
 import { Col, Container, Row,Image } from 'react-bootstrap';
-import {FaRegCommentDots, FaRegHeart,FaShareSquare,FaHeart} from 'react-icons/fa'
+import PostHeader from './PostHeader';
+import PostBody from './PostBody';
+import PostReactions from './PostReactions';
 
 const Posts = () => {
 const allPosts  = useContext(PostsContext);
@@ -24,25 +26,16 @@ const handleLike=(id)=>{
                         <Container fluid>
                             <Row>
                                 <Col lg={12}>
-                                    <div className={Style.userInfo + ' ' + 'd-flex justify-content-start align-items-start'}>
-                                    <img src="https://dummyimage.com/40x40/000/fff.png&text=user" alt="" className={Style.avatar}/>
-                                    <p className={Style.userName}>someone shared a post</p>
-                                    </div>
+                                    <PostHeader/>
                                 </Col>
                                 <Col lg={12}>
-                                    <h5 className={Style.postTitle}>{post.title}</h5>
-                                    <p className={Style.postDescription}>{post.body}</p>
+                                    <PostBody title = {post.title} body = {post.body}/>
                                 </Col>
                                 <Col lg={12}>
                                     <Image src='https://dummyimage.com/540x313/000/fff.png' fluid/>
                                 </Col>
                                 <Col lg={12}>
-                                    <div className={Style.reactionsHolder}>
-                                    {liked? <FaHeart className={Style.reaction} onClick={(e,id)=>handleLike(index)}/>: <FaRegHeart className={Style.reaction} onClick={(e,id)=>handleLike(index)}/>}
-                                    <span className={Style.likesCount}>{post.reactions}</span>
-                                    <FaRegCommentDots className={Style.reaction}/>
-                                    <FaShareSquare className={Style.reaction}/>
-                                    </div>
+                                    <PostReactions liked = {liked} handleLike = {handleLike} likeCount = {post.reactions} index = {index}/>
                                 </Col>
                             </Row>
                         </Container>
