@@ -7,7 +7,7 @@ import PostHeader from './PostHeader';
 import PostBody from './PostBody';
 import PostReactions from './PostReactions';
 
-const Posts = () => {
+const Posts = ({selected}) => {
 const allPosts  = useContext(PostsContext);
 
 const [liked,setLiked] = useState(false);
@@ -19,7 +19,7 @@ const handleLike=(id)=>{
     <Container>
        <Row>
        {
-            allPosts?.posts.map((post,index)=>{
+            allPosts.filteredPosts.map((post,index)=>{
                 return (<>
                 <Col lg={8}>
                     <div className={Style.postContainer}>

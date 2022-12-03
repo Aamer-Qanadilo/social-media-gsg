@@ -21,7 +21,7 @@ const Tags = () => {
         post.tags[0] === tag || post.tags[1] === tag || post.tags[2] === tag
       );
     });
-    data.setPosts(filteredPosts);
+    data.setFilteredPosts([...filteredPosts]);
   };
 
   return (

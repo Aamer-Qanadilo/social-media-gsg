@@ -5,6 +5,8 @@ export const PostsContext = createContext();
 
 export const PostsProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+
 
   const getPosts = async () => {
     const { data } = await axios.get("https://dummyjson.com/posts");
@@ -14,6 +16,7 @@ export const PostsProvider = ({ children }) => {
       tempPosts.push({ ...post, liked: false });
     });
     setPosts(tempPosts);
+    setFilteredPosts(tempPosts)
   };
 
   useEffect(() => {
@@ -21,7 +24,7 @@ export const PostsProvider = ({ children }) => {
   }, []);
 
   return (
-    <PostsContext.Provider value={{ posts, setPosts }}>
+    <PostsContext.Provider value={{ posts, setPosts, filteredPosts,setFilteredPosts}}>
       {children}
     </PostsContext.Provider>
   );
